@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>Filters</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/icon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body>
+
+  <header class="header fixed" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__logo" data-scroll="#intro">Filters</div>
+
+        <nav class="nav" id="nav">
+          <a class="nav__link" href="#" data-scroll="#filter">Описание</a>
+          <a class="nav__link" href="#" data-scroll="#editor">Редактор</a>
+          <a class="nav__link" href="#" data-scroll="#use">Материалы</a>
+          <a class="nav__link" href="#" data-scroll="#work">Ход работы</a>
+          <a class="nav__link" href="#" data-scroll="#author">Авторы</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="intro" id="intro">
+    <div class="container">
+      <div class="intro__inner">
+        <h1 class="intro__title">Наложение фильтров на изображения</h1>
+
+        <a class="btn" href="#" data-scroll="#filter">Далее</a>
+      </div>
+    </div>
+  </div>   
+
+
+  <!--Filter-->
+
+  <section class="section section--filter" id="filter">
+    <div class="container">
+
+      <div class="section__header">
+        <h2 class="section__title">Описание и возможности</h2>
+        <div class="section__text">
+          <p>
+            Filters&nbsp;&mdash; это онлайн редактор изображений, позволяющий быстро и просто провести ретушь изображения с&nbsp;помощью базовых функций.<br>
+            С&nbsp;помощью фоторедактора Filters можно изменять яркость, контрастность и&nbsp;насыщенность изображения. <br>
+            Функции &laquo;шум&raquo; и&nbsp;&laquo;сепия&raquo; позволят отредактировать ваши фотографии в&nbsp;винтажном стиле. 
+            <br><br>
+            Наведите на&nbsp;изображение, чтобы увидеть фильтры в&nbsp;действии.
+          </p>
+        </div>
+      </div>
+
+      <div class="filters">
+        
+        <div class="filters__item">
+          <div class="filters1__img">
+            <img src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/2.jpg" width="380px" height="380px" alt="">
+          </div>
+        </div>
+        
+        <div class="filters__item">
+          <div class="filters2__img">
+            <img src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/coffee.jpg" width="380px" height="380px" alt="">
+          </div>
+        </div>
+        
+        <div class="filters__item">
+          <div class="filters3__img">
+            <img src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/book.jpg" width="380px" height="380px" alt="">
+          </div>
+        </div>
+
+        <div class="filters__item">
+          <div class="filters4__img">
+            <img src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/bed.jpg" width="380px" height="380px" alt="">
+          </div>
+        </div>
+
+        <div class="filters__item">
+          <div class="filters5__img">
+            <img src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/math.jpg" width="380px" height="380px" alt="">
+          </div>
+        </div>
+
+        <div class="filters__item">
+          <div class="filters6__img">
+            <img src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/work.jpg" width="380px" height="380px" alt="">
+          </div>
+        </div>
+
+        <div class="filters__item">
+          <div class="filters7__img">
+            <img src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/1.jpg" width="380px" height="380px" alt="">
+          </div>
+        </div>
+        
+        <div class="filters__item">
+          <div class="filters8__img">
+            <img src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/city.jpg" width="380px" height="380px" alt="">
+          </div>
+        </div>
+
+        <div class="filters__item">
+          <div class="filters9__img">
+            <img src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/3.jpg" width="380px" height="380px" alt="">
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+
+  <!--Редактор-->
+
+  <section class="section" id="editor">
+    <div class="container">
+
+      <div class="section__header">
+        <h2 class="section__title">Редактор изображений</h2>
+      </div>
+      
+      <div class="filter__app">
+
+        <div class="preview-wrapper">
+          <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="filter-buttons">
+
+          <div class="filter-group">
+            <button id="brightness-dec" class="min">-</button>
+            <span class="filter-name">Яркость</span>
+            <button id="brightness-inc">+</button>
+          </div>
+
+          <div class="filter-group">
+            <button id="contrast-dec" class="min">-</button>
+            <span class="filter-name">Контраст</span>
+            <button id="contrast-inc">+</button>
+          </div>
+
+          <div class="filter-group">
+            <button id="saturation-dec" class="min">-</button>
+            <span class="filter-name">Насыщенность</span>
+            <button id="saturation-inc">+</button>
+          </div>
+
+          <div class="filter-group">
+            <button id="exposure-dec" class="min">-</button>
+            <span class="filter-name">Экспозиция</span>
+            <button id="exposure-inc">+</button>
+          </div>
+
+          <div class="filter-group">
+            <button id="noise-dec" class="disabled">-</button>
+            <span class="filter-name">Шум</span>
+            <button id="noise-inc">+</button>
+          </div>
+
+          <div class="filter-group">
+            <button id="sharpen-dec" class="disabled">-</button>
+            <span class="filter-name">Резкость</span>
+            <button id="sharpen-inc">+</button>
+          </div>
+
+          <div class="filter-group">
+            <button id="sepia-dec" class="disabled">-</button>
+            <span class="filter-name">Сепия</span>
+            <button id="sepia-inc">+</button>
+          </div>
+
+          <div class="filter-group">
+            <button id="blur-dec" class="disabled">-</button>
+            <span class="filter-name">Размытие</span>
+            <button id="blur-inc">+</button>
+          </div>
+
+        </div>
+
+        <div class="editor-buttons">
+          <input type="file" id="upload-file" placeholder="Upload a Picture" />
+          <label for="upload-file">Загрузить изображение</label>
+          <button id="download-btn">Скачать изображение</button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!--Use-->
+
+  <section class="section section--services" id="use">
+    <div class="container">
+
+      <div class="section__header">
+        <h2 class="section__title">Что использовали</h2>
+        <div class="section__text">
+          <p>
+            ЦЕЛИ И ЗАДАЧИ ПРОЕКТА: <br> 
+            <br> 
+            - разработать одностраничный сайт, который позволит редактировать изображения. <br> 
+            - установить и настроить Docker и Flask приложение. <br> 
+            - выполнить дизайн и вёрстку сайта.
+          </p>
+        </div>
+      </div>
+
+      <div class="services">
+        <div class="services__item">
+          <img class="services__icon" 
+          src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/study.png" width="45px" height="45px" alt="">
+
+          <div class="services__title">Предметы</div>
+          <div class="services__text">Проектирование медицинских программно-аппаратных комплексов <br>
+            Компьютерная обработка медицинских изображений</div>
+        </div>
+
+        <div class="services__item">
+          <img class="services__icon" 
+          src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/imac.png" width="45px" height="45px" alt="">
+
+          <div class="services__title">Программы</div>
+          <div class="services__text">VirtualBox <br>
+                                      Visual Studio Code</div>
+        </div>
+
+        <div class="services__item">
+          <img class="services__icon" 
+          src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/coding.png" width="45px" height="45px" alt="">
+
+          <div class="services__title">Языки программирования</div>
+          <div class="services__text">Python <br>
+                                      HTML <br>
+                                      CSS <br>
+                                      JavaScript</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!--Work-->
+
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Процесс создания</h2>
+        <div class="section__text">
+          <p>
+            Первым делом нужно было установить операционную систему Ubuntu с&nbsp;помощью виртуальной машины VirtualBox, чтобы в&nbsp;дальнейшем упростить работу с&nbsp;Docker и&nbsp;Flask приложением. 
+            В&nbsp;качестве программы для написания кода использовалась&nbsp;Visual&nbsp;Studio&nbsp;Code. 
+            <br> 
+            Затем установили и&nbsp;настроили Docker и&nbsp;Flask приложение, используемый образ для развертывания Flask приложения в&nbsp;Docker&nbsp;&mdash; tiangolo/uwsgi-nginx-flask.
+            <br>
+            Flask приложение содержит шаблон, отображающий статическое и&nbsp;динамическое содержимое для пользователей. 
+            Выполнили дизайн и&nbsp;вёрстку одностраничного сайта с&nbsp;использованием HTML-кода, CSS-стилей и&nbsp;JavaScript-кода.
+            <br>
+            <br>
+            Более подробную инофрмацию процесса создания можно найти в&nbsp;соответствующих блоках.
+          </p>
+        </div>
+      </div>
+
+      <div class="wedo">
+        <div class="wedo__item">
+          <img src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/photo.jpg" width="570px" height="380px" alt="">
+        </div>
+        <div class="wedo__item">
+
+          <div class="accordion">
+            <div class="accordion__item" data-collapse="#wedo_1">
+
+              <div class="accordion__header">
+                <img class="accordion__icon" 
+                src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/virtualbox.png" width="40px" height="40px" alt="">
+                <div class="accordion__title">VirtualBox</div>
+              </div>
+                
+              <div class="accordion__content" id="wedo_1">
+                <p>
+                  Запуск операционной системы Ubuntu 22.10 с помощью виртуальной машины VirtualBox.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="accordion__item" data-collapse="#wedo_2">
+
+              <div class="accordion__header">
+                <img class="accordion__icon" 
+                src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/docker.png" width="40px" height="40px" alt="">
+                <div class="accordion__title">Docker</div>
+              </div>
+                
+              <div class="accordion__content" id="wedo_2">
+                <p>
+                  Установка Docker.<br>
+                   <br>
+                  Настройка Flask приложения:<br>
+                  __init__.py&nbsp;&mdash; создание экземпляра Flask и&nbsp;импортирование логики из&nbsp;views.py.<br>
+                  views.py&nbsp;&mdash; открытие веб-страницы.<br>
+                  uwsgi.ini&nbsp;&mdash; содержит конфигурацию uWSGI для Flask приложения.<br>
+                  requirements.txt&nbsp;&mdash; указание зависимостей, которые pip менеджер пакетов устанавливает при развертывании Docker.<br>
+                  main.py&nbsp;&mdash; точка входа в&nbsp;приложение.<br>
+                  Dockerfile&nbsp;&mdash; команды, которые определяют, как будет создаваться образ и&nbsp;какие дополнительные требования будут включены.<br>
+                   <br>
+                  Настройка Docker:<br>
+                  start.sh&nbsp;&mdash; сценарий оболочки, который создает образ и&nbsp;контейнер Docker из&nbsp;Dockerfile.<br>
+                  Используемый образ&nbsp;&mdash; tiangolo/uwsgi-nginx-flask.<br>
+                </p>
+              </div>
+            </div>
+
+
+            <div class="accordion__item" data-collapse="#wedo_3">
+
+              <div class="accordion__header">
+                <img class="accordion__icon" 
+                src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/web-design.png" width="40px" height="40px" alt="">
+                <div class="accordion__title">CSS/HTML</div>
+              </div>
+                
+              <div class="accordion__content" id="wedo_3">
+                <p>
+                Вёрстка сайта с использованием HTML-кода, CSS-стилей и JavaScript-кода.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion__item" data-collapse="#wedo_4">
+
+              <div class="accordion__header">
+                <img class="accordion__icon" 
+                src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/link.png" width="40px" height="40px" alt="">
+                <div class="accordion__title">Дополнительные инструменты</div>
+              </div>
+                
+              <div class="accordion__content" id="wedo_4">
+                <p>
+                  Вёрстка текста&nbsp;&mdash; <a class="wedo__link" href="https://www.artlebedev.ru/typograf/">Типограф</a>. <br>
+                  Для корректного отображения статических элементов веб-страницы была использована общедоступная сеть доставки контента <a class="wedo__link" href="https://www.jsdelivr.com">jsDelivr</a>.
+
+                </p>
+              </div>
+            </div>
+
+
+          </div> <!--конец accordion-->
+
+        </div> <!--конец wedo__item-->
+      </div> <!--конец wedo-->
+
+    </div>
+  </section>
+
+
+  <!--Author-->
+  <section class="section section--author" id="author">
+    <div class="container">
+
+      <div class="section__header">
+        <h2 class="section__title">Авторы</h2>
+      </div>
+
+      <div class="author">
+        <div class="author__item">
+        <img class="author__photo" src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/images/face.jpg" alt="">
+          <div class="author__content">
+            <div class="author__name">Наташа Алексеева</div>
+            <div class="author__prof">КББО-02-19</div>
+            <div class="author__text">
+              Этот кейс&nbsp;&mdash; первый опыт создания сайта с&nbsp;последующей загрузкой его в&nbsp;Flask приложение и&nbsp;развертывании в&nbsp;Docker контейнере. <br>
+              <br>
+              Ссылка на репозиторий <a class="author__link" href="https://github.com/NatalieAlex/test_filters">GitHub</a>.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+   <div class="container">
+      <div class="copyright">
+        © 2023 Filters by <span>Natasha</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/NatalieAlex/test_filters@main/app/static/js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+</body>
+</html>
